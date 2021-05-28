@@ -12,6 +12,19 @@ const connection = mysql.createConnection({
 
 function mainMenu(){
     inquirer.prompt({
-        
+        name: 'action',
+        type: 'list',
+        message: 'Welcome to employee database! What would you like to do?',
+        choices: [
+                'View all employees',
+                'View all departments',
+                'View all roles',
+                'Add an employee',
+                'Add a department',
+                'Add a role',
+                'Update employee role',
+                'Delete an employee',
+                'EXIT'
+                ]
     })
 }
