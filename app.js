@@ -82,7 +82,7 @@ function viewDepartments() {
 };
 
 function viewRoles() {
-    var query = 'SELECT FROM * role';
+    var query = 'SELECT * FROM Role';
     connection.query(query, function(err, res) {
         if (err) throw err;
         console.table('All Roles:', res);
@@ -90,6 +90,48 @@ function viewRoles() {
     })
 };
 
-
+function addEmployee() {
+    connection.query('SELECT * FROM role', function (err, res) {
+        if (err) throw (err);
+        inquirer.prompt ([
+            {
+                name: 'first_name',
+                type: 'input',
+                message: "What is the employee's first name?"
+            },
+            {
+                name: 'last_name',
+                type: 'input',
+                message: "What is the meployee's last name?"
+            },
+            {
+                name: 'manage_id',
+                type: 'input',
+                message: "what is the employee's manger ID?"
+            },
+            {
+                name:'role',
+                type: 'list',
+                choices: function() {
+                    var roleArray = [];
+                    for (let i = 0; i < res.length; i++) {
+                        roleArray.push(res[i].title);
+                    }
+                    return roleArray;
+                },
+                message: "What is this employee's role?"
+            },
+        ]).then(function (answer) {
+            let role_id;
+            for (let a = 0; a < res.length; a++) {
+                if (res[a].title == answer.role) {
+                    role_id = res[a].id;
+                    console.log(role_id)
+                }                  
+            } 
+            
+        })
+    )}
+};
 
 
