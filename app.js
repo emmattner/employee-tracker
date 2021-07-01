@@ -25,6 +25,39 @@ function mainMenu(){
                 'Update employee role',
                 'Delete an employee',
                 'EXIT'
-                ]
+                ]       
     })
-}
+    .then(function (answer) {
+    switch (answer.action) {
+        case 'View all employees':
+            viewEmployees();
+            break;
+        case 'View all departments':
+            viewDepartments();
+            break;
+        case 'View all roles':
+            viewRoles();
+            break;
+        case 'Add an employee':
+            addEmployee();
+            break;
+        case 'Add a department':
+            addDepartment();
+            break;
+        case 'Add a role':
+            addRole();
+            break;
+        case 'Update employee role':
+            updateRole();
+            break;
+        case 'Delete an employee':
+            deleteEmployee();
+            break;
+        case 'EXIT': 
+            exitApp();
+            break;
+        default:
+            break;
+    }
+})
+};
