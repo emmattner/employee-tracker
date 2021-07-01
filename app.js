@@ -129,9 +129,23 @@ function addEmployee() {
                     console.log(role_id)
                 }                  
             } 
-            
+            connection.query(
+                'INSERT INTO employee SET ?',
+                {
+                    first_name: answer.first_name,
+                    last_name: answer.last_name,
+                    manager_id: answer.manager_id,
+                    role_id: role_id,
+                },
+                function (err) {
+                    if (err) throw err;
+                    console.log('Your employee has been added!');
+                    options();
+                })
         })
-    )}
-};
+    }
+)};
+
+
 
 
