@@ -1,16 +1,20 @@
-const mysql = require('mysql');
+const mysql = require('mysql2');
 const inquirer = require('inquirer');
 const consoleTable = require('console.table')
 
 const connection = mysql.createConnection({
     host: 'localhost',
-    port: 3306,
     user: 'root',
-    password: ' ',
+    password: '',
     database: 'employees_db'
 })
 
-function mainMenu(){
+connection.connect(function(err){
+    if (err) throw err;
+    options();
+})
+
+function options(){
     inquirer.prompt({
         name: 'action',
         type: 'list',
@@ -57,6 +61,7 @@ function mainMenu(){
             exitApp();
             break;
         default:
+            console.log(`invalid action, answer action`);
             break;
     }
 })
@@ -105,7 +110,7 @@ function addEmployee() {
                 message: "What is the meployee's last name?"
             },
             {
-                name: 'manage_id',
+                name: 'manager_id',
                 type: 'input',
                 message: "what is the employee's manger ID?"
             },
@@ -146,6 +151,31 @@ function addEmployee() {
     }
 )};
 
+function addDepartment() {
+    inquirer
+        .prompt([
+            {
+                name: 'newDepartment', 
+                type: 'input', 
+                message: 'Which department would you like to add?'
+            }
+            ]).then(function (answer) {
+                connection.query(
+                    'INSERT INTO department SET ?',
+                    {
+                        name: answer.newDepartment
+                    });
+                var query = 'SELECT * FROM department';
+                connection.query(query, function(err, res) {
+                if(err)throw err;
+                console.log('Your department has been added!');
+                console.table('All Departments:', res);
+                options();
+                })
+            })
+};
+
+
 // update a role in the DB
 
 function updateRole() {
@@ -162,6 +192,7 @@ function exitApp() {
     connection.end();
 };
 
+module.exports = connection;
 
 
 
