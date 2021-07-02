@@ -157,6 +157,10 @@ function deleteEmployee() {
 
 };
 
+// exit app
+function exitApp() {
+    connection.end();
+};
 
 
 
