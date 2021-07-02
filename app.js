@@ -146,6 +146,18 @@ function addEmployee() {
     }
 )};
 
+// update a role in the DB
+
+function updateRole() {
+
+};
+
+//  delete an employee
+function deleteEmployee() {
+
+};
+
+
 
 
 
