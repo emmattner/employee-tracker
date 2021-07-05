@@ -21,6 +21,7 @@ Simply clone the repository into your directory, then right click and run Open I
 
 ## Usage Information
 This application This application employs the following dependencies:
+ * MySQL
  * NodeJS
  * Inquirer
  * Npm
