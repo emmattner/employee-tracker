@@ -21,14 +21,9 @@ Simply clone the repository into your directory, then right click and run Open I
 
 ## Usage Information
 This application This application employs the following dependencies:
- * Express JS
- * JSON
  * NodeJS
 
 ## Application ScreenShots
-![notetaker](https://user-images.githubusercontent.com/78684306/124088873-88322480-da92-11eb-9481-60ee987d748d.png)
-<br>
-![notetaker2](https://user-images.githubusercontent.com/78684306/124088838-7f415300-da92-11eb-892c-93f55dcf61c0.png)
 
 
 
@@ -37,7 +32,6 @@ Emma Mattner
 
 
 ## Deployment Link
-https://emmas-note-taker.herokuapp.com/
 
 
 ## Questions
