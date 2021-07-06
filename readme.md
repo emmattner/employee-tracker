@@ -17,7 +17,7 @@
 Here is a command-line application that is run through ``'node'`` that gives the user access to view all the department, employee and role databases in mySQL. The user can also use this aplication to add the department, employee and role databases.
 
 ## Installation Instructions
-Simply clone the repository into your directory, then right click and run Open Intergrated Terminal, run ``'npm install'`` to install the required dependencies. Then run ``'node app.js'`` to start the application, follow the prompts to view or add deparments, employees or roles.
+Simply clone the repository into your directory, then right click and run Open Intergrated Terminal, run ``'npm install'`` to install the required dependencies. Run ``'mysql -u root -p'`` enter password and then run ``'source seed.sql'`` to load all Databases in MySQL. Run ``'node app.js'`` to start the application, follow the prompts to view, add or update deparments, employees or roles.
 
 ## Usage Information
 This application This application employs the following dependencies:
