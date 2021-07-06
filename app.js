@@ -264,6 +264,7 @@ function updateRole() {
                     department_id = res[a].id;
                 }
             }
+    
             connection.query(
                 'INSERT INTO role SET ?',
                 {
@@ -281,10 +282,9 @@ function updateRole() {
     })
 };
 
-
 //  delete an employee
 function deleteEmployee() {
-
+    
 };
 
 // exit app
