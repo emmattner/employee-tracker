@@ -27,6 +27,9 @@ This application This application employs the following dependencies:
  * Npm
 
 ## Application ScreenShots
+<img width="598" alt="employee-tracker2" src="https://user-images.githubusercontent.com/78684306/124589682-6c1af280-de99-11eb-83fd-d299e5344758.png">
+<br>
+<img width="606" alt="employee-tracker" src="https://user-images.githubusercontent.com/78684306/124589739-7a690e80-de99-11eb-9d77-c00085ec7c71.png">
 
 
 
