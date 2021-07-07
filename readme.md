@@ -8,7 +8,7 @@
 * [Usage Information](#usage-information)
 * [Application ScreenShots](#application-screenShots)
 * [Contributors](#contributors)
-* [Deployment Link](#deployment-link)
+* [Application Demo](#application-demo)
 * [Questions](#questions)
 * [License](#license)
 
@@ -37,7 +37,11 @@ This application This application employs the following dependencies:
 Emma Mattner
 
 
-## Deployment Link
+## Application Demo 
+
+![Alt Text](https://media.giphy.com/media/vRjr0xns6JaHpvgWY3/giphy.gif)
+
+
 
 
 ## Questions
